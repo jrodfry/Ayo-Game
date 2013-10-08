@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Amy Fry
+ * @author Jared Fry
  */
 public class Ayoboardgame 
 {
@@ -21,6 +21,14 @@ String instructions = "The game starts by placing 4 seeds in each of the 12 cups
         + "(If your last seed lands in your opponent's cup, you can capture all the seeds in that cup, and add\n"
         + "it to your bank but you need 4 seeds or it depends on the amount agreed on if 3 or 5 seeds.).\n"
         + "The game continues until one player can not move, at which point, the one with the most seeds wins.\n\n";
+
+String choice = "What type of game will you play? Press one (1) for playing against the computer. Press two (2)\n"
+        + "in order to play against another person.\n\n";
+        
+String plays = "Who will make the first move?\n\n";
+String move = "Choose a cup.\n\n";
+String wrong = "That isn't a valid cup choice, choose one that either belongs to you or\n"
+        + "isn't empty.\n\n";
     /**
      * @param args the command line arguments
      */
@@ -29,7 +37,10 @@ String instructions = "The game starts by placing 4 seeds in each of the 12 cups
     Ayoboardgame myGame = new Ayoboardgame();
     myGame.getName();
     myGame.displayHelp();
-    
+    myGame.gameChoice();
+    myGame.whoPlaysFirst();
+    myGame.makeMove();
+    myGame.wrongCup();
     }
         
         public void getName()
@@ -43,6 +54,24 @@ String instructions = "The game starts by placing 4 seeds in each of the 12 cups
         System.out.println("\nWelcome "+ this.name + "\n");
         System.out.println(this.instructions);
         }
-   
+     
+        public void gameChoice()
+        {
+         System.out.println(this.name + "\n");
+         System.out.println(this.choice);
+        }
+        public void whoPlaysFirst()
+        {
+         System.out.println(this.name + "\n");
+         System.out.println(this.plays);
+        }
+        public void makeMove()
+        {
+         System.out.println(this.move);
+        }
+        public void wrongCup()
+        {
+            System.out.println(this.wrong);
+        }
 }
 
