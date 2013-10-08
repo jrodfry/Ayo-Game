@@ -8,24 +8,24 @@ import java.util.Scanner;
 
 /**
  *
- * @author Jared Fry
+ * @author Ehikpemokan Abhulimen
  */
 public class Ayoboardgame 
 {
 String name;
-String instructions = "The game starts by placing 4 seeds in each of the 12 cups on the board (Except the Banks),\n"
-        + "and each player sits with 6 of the cups on their side of the board, Then Choose a player to start.\n"
-        + "For each turn, a player chooses a cup, takes all the seeds in that cup (it will be 4 seeds for the\n"
-        + "first player, but it may be more or less as the game continues), and goes around the board in a\n"
-        + "counterclockwise direction, planting one seed in each cup as they go until the seeds is used up\n"
-        + "(If your last seed lands in your opponent's cup, you can capture all the seeds in that cup, and add\n"
-        + "it to your bank but you need 4 seeds or it depends on the amount agreed on if 3 or 5 seeds.).\n"
-        + "The game continues until one player can not move, at which point, the one with the most seeds wins.\n\n";
+String instructions = "*The game starts by placing 4 seeds in each of the 12 cups on the board (Except the Banks),*\n"
+        + "*and each player sits with 6 of the cups on their side of the board, Then Choose a player to start.*\n"
+        + "*For each turn, a player chooses a cup, takes all the seeds in that cup (it will be 4 seeds for the*\n"
+        + "*first player, but it may be more or less as the game continues), and goes around the board in a*\n"
+        + "*counterclockwise direction, planting one seed in each cup as they go until the seeds is used up*\n"
+        + "*(If your last seed lands in your opponent's cup, you can capture all the seeds in that cup, and add*\n"
+        + "*it to your bank but you need 4 seeds or it depends on the amount agreed on if 3 or 5 seeds.).*\n"
+        + "*The game continues until one player can not move, at which point, the one with the most seeds wins.*\n\n";
 
-String choice = "What type of game will you play? Press one (1) for playing against the computer. Press two (2)\n"
+String type = "What type of game will you play? Press one (1) for playing against the computer. Press two (2)\n"
         + "in order to play against another person.\n\n";
         
-String plays = "Who will make the first move?\n\n";
+String firstPlayer = "Who will make the first move?\n\n";
 String move = "Choose a cup.\n\n";
 String wrong = "That isn't a valid cup choice, choose one that either belongs to you or\n"
         + "isn't empty.\n\n";
@@ -37,8 +37,8 @@ String wrong = "That isn't a valid cup choice, choose one that either belongs to
     Ayoboardgame myGame = new Ayoboardgame();
     myGame.getName();
     myGame.displayHelp();
-    myGame.gameChoice();
-    myGame.whoPlaysFirst();
+    myGame.gameType();
+    myGame.firstPlayer();
     myGame.makeMove();
     myGame.wrongCup();
     }
@@ -55,15 +55,15 @@ String wrong = "That isn't a valid cup choice, choose one that either belongs to
         System.out.println(this.instructions);
         }
      
-        public void gameChoice()
+        public void gameType()
         {
          System.out.println(this.name + "\n");
-         System.out.println(this.choice);
+         System.out.println(this.type);
         }
-        public void whoPlaysFirst()
+        public void firstPlayer()
         {
          System.out.println(this.name + "\n");
-         System.out.println(this.plays);
+         System.out.println(this.firstPlayer);
         }
         public void makeMove()
         {
