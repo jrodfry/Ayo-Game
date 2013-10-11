@@ -35,14 +35,17 @@ String wrong = "That isn't a valid cup choice, choose one that either belongs to
     public static void main(String[] args) 
     {
     Ayoboardgame myGame = new Ayoboardgame();
+   /*
     myGame.getName();
     myGame.displayHelp();
     myGame.gameType();
     myGame.firstPlayer();
     myGame.makeMove();
     myGame.wrongCup();
-    }
-        
+   */
+    myGame.calAcceleration();
+   }
+       /* 
         public void getName()
         {
         Scanner input = new Scanner(System.in);
@@ -73,5 +76,47 @@ String wrong = "That isn't a valid cup choice, choose one that either belongs to
         {
             System.out.println(this.wrong);
         }
+        */
+public void calAcceleration()
+  {   
+  Scanner input = new Scanner(System.in);
+  
+  System.out.println("Please enter the Initial velocity(m/s): ");
+  float initialVelocity = input.nextFloat();
+  do 
+    { 
+     System.out.println("Please enter a number greater than 0.");
+     initialVelocity = input.nextFloat();
+     
+    }
+  while (initialVelocity < 0);
+
+  
+  System.out.println("Please enter the Final velocity(m/s): ");
+  float finalVelocity = input.nextFloat();
+   do
+    {
+     System.out.println("Please enter a number greater than 0.");
+     finalVelocity = input.nextFloat();
+    }
+       while (finalVelocity < 0);
+   
+   
+  System.out.println("Please enter time taken(s): ");
+  float time = input.nextFloat();
+  do
+    {
+     System.out.println("Please enter a number greater than 0.");
+     time = input.nextFloat();
+    }
+       while (time < 0);
+   
+  float deltaVelocity = finalVelocity - initialVelocity;
+   
+  float acceleration =(int)(deltaVelocity / time);
+  
+  System.out.println("Your acceleration over your inputed velocity is " + acceleration);
+
+  }
 }
 
