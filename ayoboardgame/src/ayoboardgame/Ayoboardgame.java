@@ -42,8 +42,10 @@ String wrong = "That isn't a valid cup choice, choose one that either belongs to
     myGame.firstPlayer();
     myGame.makeMove();
     myGame.wrongCup();
-   */
+ 
     myGame.calAcceleration();
+     */
+    myGame.calArea();
    }
        /* 
         public void getName()
@@ -77,6 +79,7 @@ String wrong = "That isn't a valid cup choice, choose one that either belongs to
             System.out.println(this.wrong);
         }
         */
+    /*
 public void calAcceleration()
   {   
   Scanner input = new Scanner(System.in);
@@ -118,5 +121,27 @@ public void calAcceleration()
   System.out.println("Your acceleration over your inputed velocity is " + acceleration);
 
   }
+*/
+    
+    public void calArea()
+    {
+    Scanner input = new Scanner(System.in);
+     System.out.println("Please enter a Radius(cm): ");
+     float radius = input.nextFloat();
+   
+     do 
+    { 
+     System.out.println("Please enter a number greater than 0. ");
+     radius = input.nextFloat();
+    }
+     while (radius < 0);
+       
+       double pi = 3.14;
+       float calArea = (float) (pi * radius * radius);
+       
+       System.out.println(" The Area of The Circle is " + calArea);
+    }
+         
+
 }
 
